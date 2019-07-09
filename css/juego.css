@@ -1,0 +1,198 @@
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  width: 100vw;
+  margin: 0px;
+  max-height: 100%;
+  background-image: url(../images/fondo.jpg);
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+li {
+  padding: 5px 0;
+  animation: fadein 5s;
+}
+
+li::before {
+  content: "• ";
+  color: #f8d410;
+}
+
+.col-40 h1 {
+  font-size: 35px;
+  color: #f8d410;
+}
+
+.col-40, .col-60 {
+  margin: 0;
+  vertical-align: top;
+}
+
+.col-40 {
+  background: rgb(28, 72, 83);
+  padding: 30px;
+  color: rgb(255, 255, 255);
+  width: 30vw;
+  float: left;
+  min-height: 100vh;
+}
+
+.col-60 {
+  background: transparent;
+  width: 70vw;
+  float: left;
+}
+
+#flecha {
+  font-size: 50px;
+  margin-bottom: -20px;
+}
+
+.texto-centrado {
+  text-align: center;
+}
+
+.texto-centrado img {
+  width: 60%;
+}
+
+#juego div {
+  text-align: center;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tablero {
+  width: 600px;
+  height: 600px;
+  margin: 6.8% auto;
+  -webkit-box-shadow: 0px 0px 33px 29px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 33px 29px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 33px 29px rgba(0, 0, 0, 0.75);
+}
+
+.tablero div {
+  width: 33.33%;
+  height: 33.33%;
+  outline: solid 1px rgb(34, 64, 71);
+  float: left;
+}
+
+.tablero div img {
+  width: 100%;
+  margin: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: right;
+  clear: both;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,f8d410+100&0+0,0+31,1+100 */
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(77, 66, 5, 0) 31%, rgba(248, 212, 16, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(77, 66, 5, 0) 31%, rgba(248, 212, 16, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(77, 66, 5, 0) 31%, rgba(248, 212, 16, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f8d410', GradientType=1);
+  /* IE6-9 */
+  padding: 1% 3em;
+  z-index: 999999;
+}
+
+.contenido {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .contenido {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    color: white;
+    font-size: 2em;
+    padding: 10%;
+  }
+  footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: auto;
+    padding: 5%;
+  }
+}
+
+/*Alert Personalizado*/
+
+#alert-fondo {
+  display: none;
+  opacity: .8;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: #FFF;
+  width: 100%;
+  z-index: 10;
+}
+
+#contenido-alert {
+  display: none;
+  position: fixed;
+  background: #000;
+  border-radius: 7px;
+  width: 550px;
+  z-index: 10;
+}
+
+#contenido-alert>div {
+  background: #FFF;
+  margin: 8px;
+}
+
+#contenido-alert>div>#alert-header {
+  background: #666;
+  font-size: 19px;
+  padding: 10px;
+  color: #CCC;
+}
+
+#contenido-alert>div>#alert-body {
+  background: #333;
+  padding: 20px;
+  color: #FFF;
+}
+
+#contenido-alert>div>#alert-footer {
+  background: #666;
+  padding: 10px;
+  text-align: right;
+}
